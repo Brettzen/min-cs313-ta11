@@ -2,7 +2,7 @@ $(function(){
   $("#search").on('click', function(){
     // console.log($('#movieName').val());
     var movieSearch = $('#movieName').val();
-    $.get('http://www.omdbapi.com/?s="'+movieSearch+'"&apikey=97afd53d', function(data, status) {
+    $.get('https://www.omdbapi.com/?s="'+movieSearch+'"&apikey=97afd53d', function(data, status) {
       console.log(data);
       results = data;
       $('#movieResults').html('');
@@ -19,7 +19,7 @@ $(function(){
 
 function getData(id) {
   console.log(id);
-  $.get('http://www.omdbapi.com/?i='+id+'&apikey=97afd53d&plot=full', function(data, status) {
+  $.get('https://www.omdbapi.com/?i='+id+'&apikey=97afd53d&plot=full', function(data, status) {
     console.log(data);
     movieDetails = data;
     $('#movieDetails').html('<h2>'+movieDetails.Title+'</h2>');
